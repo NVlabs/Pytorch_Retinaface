@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytorch_retinaface"
+version = "0.1.0"
+dependencies = [
+    "torch>=1.1.0",
+    "torchvision>=0.3.0",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Jiankang Deng", email = "j.deng16@imperial.ac.uk"},
+  {name = "Jia Guo", email = "guojia@gmail.com"},
+]
+description = "RetinaFace in PyTorch"
+readme = "README.md"
+license = {file = "LICENSE.MIT"}
+keywords = ["pytorch", "retinaface"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/biubug6/Pytorch_Retinaface"
+
+[tool.setuptools]
+packages = [
+    "pytorch_retinaface",
+    "pytorch_retinaface.data",
+    "pytorch_retinaface.layers",
+    "pytorch_retinaface.layers.functions",
+    "pytorch_retinaface.layers.modules",
+    "pytorch_retinaface.models",
+    "pytorch_retinaface.utils",
+    "pytorch_retinaface.utils.nms"
+]
+
+[tool.setuptools.package-dir]
+pytorch_retinaface = "."
